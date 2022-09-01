@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46cbba8d5f1171f70a5137937a4dda4dba6a552e
 #include <U8glib.h>
 #include <SoftwareSerial.h>
 #include <TimerOne.h>
