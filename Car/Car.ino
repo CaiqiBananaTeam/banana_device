@@ -21,7 +21,7 @@ float Kp=0.1,Ki = 0.03,Kd = 0.15; //可能在某些电机上该参数不收敛�
 float rpm,rpmb;
 float goal =180;
 int sw=12;
-int pwm;.
+int pwm;
 
 void setup()
 {
@@ -52,6 +52,7 @@ void loop()
 {
 while(Serial.available())
 {
+  //Serial.println("ok");
    char b[8]={0,0,0,0,0,0,0};
    Serial.readBytes(b,7);
   int retu[2]={0,0};
@@ -69,9 +70,9 @@ while(Serial.available())
    }
   }
   }
-  Serial.println(b);
-  Serial.print(retu[0]);
-  Serial.println(retu[1]);
+  //Serial.println(b);
+  //Serial.print(retu[0]);
+  //Serial.println(retu[1]);
   if(retu[1]>180)
     {my.write(50);
     digitalWrite(blue,LOW);
@@ -118,10 +119,9 @@ while(Serial.available())
 //    Serial.print(" rpm:");
 //    Serial.println(rpm);
     analogWrite(PWM,pwm);
-//    delay(50);
+   delay(50);
 //    
 }
-    
 }
 float err_l=0;
 int PID(float goal,float now)
