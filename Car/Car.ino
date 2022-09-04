@@ -21,7 +21,7 @@ float Kp=0.1,Ki = 0.03,Kd = 0.15; //可能在某些电机上该参数不收敛�
 float rpm,rpmb;
 float goal =180;
 int sw=12;
-int pwm;.
+int pwm;
 
 void setup()
 {
@@ -119,7 +119,7 @@ while(Serial.available())
 //    Serial.print(" rpm:");
 //    Serial.println(rpm);
     analogWrite(PWM,pwm);
-   delay(50);
+   //delay(50);
 //    
 }
 }
